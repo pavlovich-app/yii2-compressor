@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist lajax/yii2-asset-minifier "*"
+composer require --prefer-dist pavlovich-app/yii2-compressor "*"
 ```
 
 or add
 
 ```
-"lajax/yii2-asset-minifier": "*"
+"pavlovich-app/yii2-compressor": "*"
 ```
 
 to the require section of your `composer.json` file.
