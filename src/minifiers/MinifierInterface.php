@@ -1,6 +1,6 @@
 <?php
 
-namespace lajax\assetminifier\minifiers;
+namespace compressor\minifiers;
 
 /**
  * Interface for minifying asset files.

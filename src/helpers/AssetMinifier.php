@@ -1,6 +1,6 @@
 <?php
 
-namespace lajax\assetminifier\helpers;
+namespace compressor\helpers;
 
 use Yii;
 
