@@ -1,4 +1,4 @@
-Yii2 AssetMinifier
+Yii2 Assets Compressor 
 =================
 Runtime minification and combination of asset files.
 
@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist pavlovich-app/yii2-compressor "*"
+composer require --prefer-dist pavlovich-app/yii2-compressor "2.*"
 ```
 
 or add
 
 ```
-"pavlovich-app/yii2-compressor": "*"
+"pavlovich-app/yii2-compressor": "2.*"
 ```
 
 to the require section of your `composer.json` file.
@@ -57,11 +57,14 @@ Usage
         'createGz' => false,                    // create compressed .gz file, (so the web server doesn’t need to
                                                 // compress asset files on each page view). Requires
                                                 // special web server configuration. [default]
-        'minifier' => [                         // Settings of the components performing the minification of asset files
-            'workPath' => compressor\Minifier::WORKPATH_SOURCE, // default setting
-            'js' => '', // override default minifier, see available minifiers below
-            'css' => '', // override default minifier, see available minifiers below
-        ],
+                          
+                                                
+        //'minifier' => [                        // Settings of the components performing the minification of asset files
+        //    'workPath' => compressor\Minifier::WORKPATH_SOURCE, // default setting
+        //    'js' => '', // override default minifier, see available minifiers below
+        //    'css' => '', // override default minifier, see available minifiers below
+        //],
+        
         'combiner' => [
             'class' => 'compressor\Combiner',
             'combinedFilesPath' => '/lajax-asset-minifier'      // default setting
@@ -138,22 +141,6 @@ Usage
 ```
 
 
-
-##Minifiers
-
-###JavaScript minifiers:
-
-* Web: [javascript-minifier.com](http://javascript-minifier.com/)
-* Php: [CssMin](https://github.com/natxet/CssMin)
-* Cli: [compiler](https://github.com/packagist/closurecompiler-bin)
-
-###StyleSheet minifiers:
-
-* Web: [cssminifier.com](http://cssminifier.com/)
-* Php: [JShrink](http://blog.tedivm.com/category/projects/jshrink/)
-* Cli: [Yui Compressor](https://github.com/packagist/yuicompressor-bin)
-
-
 ###Serving *.js.gz and *.css.gz files instead of *.js or *.css in Nginx:
 
 ```
@@ -162,10 +149,9 @@ gzip_static on | off | always
 
 [Nginx gzip static module](http://nginx.org/en/docs/http/ngx_http_gzip_static_module.html)
 
-Links
+Projects for example:
 -----
 
-- [GitHub](https://github.com/lajax/yii2-asset-minifier)
-- [Api Docs](http://lajax.github.io/yii2-asset-minifier)
-- [Packagist](https://packagist.org/packages/lajax/yii2-asset-minifier)
-- [Yii Extensions](http://www.yiiframework.com/extension/yii2-asset-minifier)
+- [Minfin PL](https://minfin.pl) - курс валют в Польщі
+- [Говерла Курс](https://goverla.lutsk.ua) - курс валют Говерла
+
