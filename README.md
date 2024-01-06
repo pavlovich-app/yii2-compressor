@@ -36,7 +36,7 @@ Usage
 'components' => [
     // ...
     'assetMinifier' => [
-        'class' => \lajax\assetminifier\Component::className(),
+        'class' => \compressor\Component::className(),
     ],
     // ...
 ],
