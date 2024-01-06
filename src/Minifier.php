@@ -5,7 +5,7 @@ namespace compressor;
 use Yii;
 use yii\helpers\Url;
 use yii\helpers\FileHelper;
-use lajax\assetminifier\helpers\AssetMinifier;
+use compressor\helpers\AssetMinifier;
 
 /**
  * Class performing the minification of asset files.
@@ -42,8 +42,8 @@ class Minifier extends \yii\base\BaseObject
      * @var string Type of processed asset file (basePath|sourcePath).
      * 
      * ~~~
-     * lajax\assetminifier\Minifier::WORKPATH_SOURCE    // If we only use js anc css.
-     * lajax\assetminifier\Minifier::WORKPATH_BASE      // If we convert css or js files during runtime.
+     * compressor\Minifier::WORKPATH_SOURCE    // If we only use js anc css.
+     * compressor\Minifier::WORKPATH_BASE      // If we convert css or js files during runtime.
      * ~~~
      * 
      */

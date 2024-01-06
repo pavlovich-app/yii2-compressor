@@ -4,7 +4,7 @@ namespace compressor;
 
 use Yii;
 use yii\web\View;
-use lajax\assetminifier\helpers\AssetMinifier;
+use compressor\helpers\AssetMinifier;
 
 /**
  * Component performing the minification and combination of asset files.
@@ -15,7 +15,7 @@ use lajax\assetminifier\helpers\AssetMinifier;
  * 'bootstrap' => ['assetMinifier'],
  * 'components' => [
  *      'assetMinifier' => [
- *          'class' => lajax\assetminifier\Component::className()
+ *          'class' => compressor\Component::className()
  *      ]
  * ]
  * ~~~
