@@ -50,7 +50,7 @@ Usage
 'components' => [
     // ...
     'assetMinifier' => [
-        'class' => \lajax\assetminifier\Component::className(),
+        'class' => \compressor\Component::className(),
         'minifyJs' => true,                     // minify js files. [default]
         'minifyCss' => true,                    // minify css files [default]
         'combine' => true,                      // combine asset files. [default]
@@ -58,12 +58,12 @@ Usage
                                                 // compress asset files on each page view). Requires
                                                 // special web server configuration. [default]
         'minifier' => [                         // Settings of the components performing the minification of asset files
-            'workPath' => lajax\assetminifier\Minifier::WORKPATH_SOURCE, // default setting
+            'workPath' => compressor\Minifier::WORKPATH_SOURCE, // default setting
             'js' => '', // override default minifier, see available minifiers below
             'css' => '', // override default minifier, see available minifiers below
         ],
         'combiner' => [
-            'class' => 'lajax\assetminifier\Combiner',
+            'class' => 'compressor\Combiner',
             'combinedFilesPath' => '/lajax-asset-minifier'      // default setting
         ]
     ],
@@ -78,11 +78,11 @@ Usage
 
 ```php
 'js' => [                           // minify js via web API
-    'class' => 'lajax\assetminifier\minifiers\WebJsMinifier',
+    'class' => 'compressor\minifiers\WebJsMinifier',
     'url' => 'http://javascript-inifier.com/raw'   // default setting
 ],
 'css' => [
-    'class' => 'lajax\assetminifier\minifiers\WebCssMinifier',
+    'class' => 'compressor\minifiers\WebCssMinifier',
     'url' => 'http://cssminifier.com/raw'           // default setting
 ]
 ```
@@ -91,14 +91,14 @@ Usage
 
 ```php
 'js' => [                                        // Default JS minifier.
-    'class' => 'lajax\assetminifier\minifiers\PhpJsMinifier',
+    'class' => 'compressor\minifiers\PhpJsMinifier',
     // default settings, you can override them
     'options' => [
        'flaggedComments' => true                // Disable YUI style comment preservation.
     ]
 ],
 'css' => [                                       // Default CSS minifier.
-    'class' => 'lajax\assetminifier\minifiers\PhpCssMinifier',
+    'class' => 'compressor\minifiers\PhpCssMinifier',
     // default settings, you can override them
     'filters' => [
         'ImportImports' => false,
@@ -126,12 +126,12 @@ Usage
 
 ```php
 'js' => [
-    'class' => 'lajax\assetminifier\minifiers\CliJsMinifier',
+    'class' => 'compressor\minifiers\CliJsMinifier',
     // default settings, you can override them
     'command' => 'java -jar ' . Yii::getAlias('@vendor/packagist/closurecompiler-bin/bin/compiler.jar') . ' --js {from}',
 ],
 'css' => [
-    'class' => 'lajax\assetminifier\minifiers\CliCssMinifier',
+    'class' => 'compressor\minifiers\CliCssMinifier',
     // default settings, you can override them
     'command' => 'java -jar ' . Yii::getAlias('@vendor/packagist/yuicompressor-bin/bin/yuicompressor.jar') . ' --type css {from}',
 ]
