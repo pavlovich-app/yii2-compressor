@@ -2,7 +2,7 @@
 
 namespace compressor\minifiers;
 
-use JShrink\Minifier;
+use compressor\minifiers\JsMinifier;
 
 /**
  * Minifying js using php script.
@@ -26,7 +26,7 @@ class PhpJsMinifier extends \yii\base\BaseObject implements MinifierInterface
      */
     public function minify($path)
     {
-        return Minifier::minify(file_get_contents($path), $this->options);
+        return JsMinifier::minify(file_get_contents($path), $this->options);
     }
 
 }
