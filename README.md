@@ -1,4 +1,4 @@
-Yii2 Assets Compressor 
+Yii2 Assets Compressor PHP 7 - 8
 =================
 Runtime minification and combination of asset files.
 
